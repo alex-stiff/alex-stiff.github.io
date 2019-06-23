@@ -1,3 +1,4 @@
 name: Alex Stiff
 markdown: kramdown
-theme: jekyll-theme-leap-day
+theme: jekyll-theme-slate
+title: alexstiff.com
