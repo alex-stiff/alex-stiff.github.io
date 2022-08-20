@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Session Zero - captured"
+title: "Session Zero - captured!"
 date: 2022-08-20
 ---
 
@@ -16,23 +16,23 @@ The five adventurers wake up to the sound of crying. Lying on the cold hard ston
 
 Lance, a heavily muscled human, wastes no time and leans his weight against the cell door and pushes it open. In the adjacent cell, the Elven rogue Taegen takes a more subtle approach and quickly picks the lock to get himself out using a lockpick that he had hidden away.
 
-The stout dwarf Hariharan takes a run up and charges head first into his door, hitting it with such force that the whole row of cells all spring open, freeing both Enna, another dwarf, and Merry, a cheerful looking halfling. They grab their weapons and equipment that the goblins handily left in a big pile by the door, and proceed in persuit of the goblins.
+The stout dwarf Hariharan takes a run up and charges head first into his door, hitting it with such force that the whole row of cells all spring open, freeing both Enna, another elf, and Merry, a cheerful looking halfling. They grab their weapons and equipment that were handily left in a big pile by the door, and proceed in persuit of the goblins.
 
-Entering the next room, torches along the wall reveal a stone table with strange carvings on it. Hariharan recognises the marks in the stone, and tells the party that the table is a sacrificial offering table of human design, looking suspiciously at Lance as he does so. One side of the room is piled with rubble and rocks, covering what used to be an entrance, blocking the way. The only other out is a door on the opposite side of the room, which leads to a narrow corridor which curves around to the left.
+Entering the next room, torches along the wall reveal a stone table with strange carvings on it. Hariharan recognises the marks in the stone, and tells the party that the table is a sacrificial offering table of human design, looking suspiciously at Lance as he does so. One side of the room is piled with rubble and rocks, covering what used to be an entrance, blocking the way. The only other out is a door on the opposite side of the room, which leads to a narrow corridor which curves around to the right.
 
 As the party approach the end of the corridor, they see another door, with muffled voices coming from behind it. Getting closer, they are able to make out that it's the two goblins bickering.
 
-"...heavier than they look, dwarves. And don't get me started on the other two. At least the halfling and the girl don't weigh much. I'm sick of all this bagman work."
+"...heavier than they look, dwarves. And don't get me started on the human. At least the halfling and the girl don't weigh much. I'm sick of all this bagman work."
 
-"You didn't even help. You made me drag the pointy ear all the way down here!"
+"You didn't even help. You made me drag the pointy ears all the way down here!"
 
 Using their arguing as a distraction, Taegen quietly opens the door and attacks.
 
 ## Goblins
 
-Taegen steps forward, nocking an arrow as he does so and firing directly at the goblin in front of him. He must have been lying on his left arm while in the prison cell, as the arrow flies past its intended target and smashes against the back wall. Lance runs forward and slices the goblin with his longsword, killing it instantly.
+Taegen steps forward, nocking an arrow as he does so and firing directly at the closest goblin. Despite being right in front of him, the arrow flies past its intended target and smashes against the back wall. Lance runs forward and slices the goblin with his longsword, killing it instantly.
 
-Seeing this, the second goblin turns on its heels and starts running towards the door at the far end of the room. Just as it reaches for the knob, a Sleep spell cast by Merry settles over its head, causing it to fall into a deep sleep. Taegen creeps over to the goblin, leans in close and slides his rapier into its heart, while simultaneously rifling through its pockets and palming a small pouch full of copper pieces.
+Seeing this, the second goblin turns on its heels and starts running towards the door at the far end of the room. Just as it reaches for the knob, a well-timed Sleep spell cast by Merry hits it in the back, causing it to immediately fall into a deep sleep. Taegen creeps over to the goblin, leans in close and slides his rapier into its chest, while simultaneously rifling through its pockets and stealing a small handful of copper pieces.
 
 From underneath the door the goblin was running for, flickering torchlight and shadows can be seen. The party also hears a low chanting intermingled with whimpering, presumably from the girl that was dragged away. Enna peeks through the keyhole and reports that the chanting is coming from a gyrating goblin shaman dancing around a fire in the centre of the room. There is also a larger darker figure, but is impossible to make out against the brightness of the fire.
 
@@ -68,10 +68,10 @@ As the lightest of the party, Merry decides she'll test the waters. She steps ou
 
 ## Rendezvous
 
-The party exit into a brightly lit forest clearing, the exit they emerged from clumsily hidden by some bushes. As they emerge, they spot a man wandering around, obviously looking for something. He is wearing a toolbelt with hammers and other blacksmithing tools, and as soon as the girl sees him she runs over with a shout of "DADDY!". She tells him how she was saved, and the blacksmith introduces himself as Jack. He agrees to lead the party the rest of the way to Phandalin, and along the way tells them about the town and gives a rundown of the town, which shops are there, and what the people are like. He mentions that the mayor will pay well for Bugbear ears and to seek him out on arrival. As a show of thanks for rescuing his daughter, Jack presents the party with a mysterious red stone, which Merry is able to determine has some magical properties, but the specfics are unknown.
+The party exit into a brightly lit forest clearing around mid morning, the exit they emerged from clumsily hidden by some bushes. As they emerge, they spot a man wandering around, obviously looking for something. He is wearing a toolbelt with hammers and other blacksmithing tools, and as soon as the girl sees him she runs over with a shout of "DADDY!". She tells him how she was saved, and the blacksmith introduces himself as Jack. He offers to lead the party the rest of the way to Phandalin. Along the way he gives them a rundown of the town, which shops are there, and what the people are like. He mentions that the mayor will pay well for Bugbear ears and to seek him out on arrival. As a show of thanks for rescuing his daughter, Jack presents the party with a mysterious red stone, which Merry is able to determine has some magical properties, but the specfics are unknown.
 
 ## Phandalin
 
-Around midday of the same day of emerging from the crypt with the blacksmith's daughter, the party arrives in the frontier Town of Phandalin. Jack takes them straight to Stonehill Inn. He speaks with the Inn keeper and arranges room and board for one night, and gives 50sp to each adventurer for saving his beloved daughter, Jacqueline. Then he suggests checking the local merchants for supplies.
+Around midday, the party arrives in the frontier Town of Phandalin. Jack takes them straight to Stonehill Inn. He speaks with the Inn keeper and arranges room and board for one night, and gives 50sp to each adventurer for saving his beloved daughter, Jacqueline. Then he suggests checking the local merchants for supplies.
 
 The party spends the afternoon perusing the merchandise of the local general goods store and coster, before returning to the Inn for a meal and a good nights rest.
