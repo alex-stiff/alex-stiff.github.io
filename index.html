@@ -3,7 +3,17 @@ layout: default
 title: The dragon of Icespire Peak
 ---
 
-<h1>{{ page.title }}</h1>
+<h1>Meet the party</h1>
+<ul class="posts">
+  {% for member in site.party %}
+  hi
+  <li>
+    <a href="{{ member.url }}" title="{{ member.title }}">x {{ member.name }}</a>
+  </li>
+  {% endfor %}
+</ul>
+
+<h1>Sessions</h1>
 <ul class="posts">
   {% for post in site.posts %}
   <li>
