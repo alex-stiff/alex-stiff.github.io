@@ -8,8 +8,6 @@ date: 2022-08-20
 
 A once prosperous city, Phandalin was destroyed and ransacked by Orcs in the late 10th century, and subsequently abandoned. Five hundred years later, it has been resettled by farmers and prospectors, and now acts as a frontier town for adventurers visiting the Sword Coast North. Its population consists primarily of humans, elves, halflings, and dwarves, although most of the dwarves live and work in the mines just outside town.
 
-Phandalin is generally a peaceful town. Recently however, rumours have been going around that a fearsome Ice Dragon has been terrorising the mines and eating the dwarves. Dragons are rare creatures, and most people go their whole lives without seeing one. Any adventurer who manages to kill a dragon will go down as a local legend, and their name will be known across the region.
-
 ## Prisoners
 
 The five adventurers wake up to the sound of crying. Lying on the cold hard stone floor in seprate cells of a rather flimsy looking prison, they see two ugly green skinned goblins dragging a young girl out of the room. The adventurers don't know each other. One minute they were traveling to Phandalin in search of work, knowledge, and coin, and the next minute they were here in this prison. They don't know how they got here, but they do know that they need to get out before the goblins come back.
@@ -34,7 +32,7 @@ Taegen steps forward, nocking an arrow as he does so and firing directly at the 
 
 Seeing this, the second goblin turns on its heels and starts running towards the door at the far end of the room. Just as it reaches for the knob, a well-timed Sleep spell cast by Merry hits it in the back, causing it to immediately fall into a deep sleep. Taegen creeps over to the goblin, leans in close and slides his rapier into its chest, while simultaneously rifling through its pockets and stealing a small handful of copper pieces.
 
-From underneath the door the goblin was running for, flickering torchlight and shadows can be seen. The party also hears a low chanting intermingled with whimpering, presumably from the girl that was dragged away. Enna peeks through the keyhole and reports that the chanting is coming from a gyrating goblin shaman dancing around a fire in the centre of the room. There is also a larger darker figure, but is impossible to make out against the brightness of the fire.
+From underneath the door the goblin was running for, flickering torchlight and shadows can be seen. The party also hears a low chanting intermingled with whimpering, presumably from the girl that was dragged away. Enna peeks through the keyhole and reports that the chanting is coming from a gyrating goblin shaman dancing around a fire in the centre of the room. She also spots a table with some magical paraphernalia on it, and larger darker figure, but is impossible to make out exactly what it is against the brightness of the fire.
 
 As the party discusses what to do the chanting reaches a crescendo, and for fear of anything bad happening to the girl, they fling open the door and burst into the room.
 
@@ -48,7 +46,7 @@ Merry conjures three glowing blue bolts of energy which shoot towards the shaman
 
 The bugbear lumbers towards Merry for revenge, and swings his morningstar at her. Fortunately, he misjudges her size, and the weapon swings harmlessly over her head. Lance and Hariharan run in to help, Lance slashing at the bugbear's midriff while Hariharan lands a direct hit on its temple with his warhammer, killing it.
 
-Merry searches the downed Shaman and discovers a spellbook, which she takes. During some downtime she'll be able to study it and learn the spells from the book.
+Merry searches a nearby table and discovers a spellbook on it, which she takes. During some downtime she'll be able to study it and learn the spells from the book.
 
 Taegen presses the girl for information, and she reveals that she was out playing in the forest a few days ago when the goblins crept up and caught her and brought her to this tomb. She seems quite upset and tells the party she just wants to get back to her Dad in Phandalin, who is the local blacksmith.
 
@@ -62,7 +60,7 @@ As the girl is being interrogated, Enna feels a slight breeze coming from the th
 
 The party realises that this is a crypt for fallen heroes. It looks old, so presumably these people have been buried here since before Phandalin was ransacked by the orcs. At the far end of the room there are steps upwards, with what looks like daylight filtering down. Above these stairs is another message:
 
-**DANGER - TREAD CAREFULLY**
+**DANGER - TREAD LIGHTLY**
 
 As the lightest of the party, Merry decides she'll test the waters. She steps out carefully into the room one step at a time, and after a few seconds reaches the other side safely. Hariharan follows just behind, but after a few steps one of the stones on the floor sinks slightly and there is a loud **click**. Just in time he spots a swinging axe appear from out of wall and jumps back, avoiding it. Him and the rest of the party make it across the rest of the room without any more traps being sprung, and head up the steps to freedom.
 
