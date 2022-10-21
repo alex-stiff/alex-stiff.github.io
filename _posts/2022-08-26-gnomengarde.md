@@ -18,15 +18,19 @@ After first breakfast they visit the townmaster, who pays 15g for the bugbear ea
 ```
 GNOMENGARDE
 
-A clan of reclusive rock gnomes resides in a small network of caves
-in the mountains to the southeast. The gnomes of Gnomengarde are
-knownfor their magical inventions. They might have something
-with which to defeat the dragon. 
+A clan of reclusive rock gnomes resides
+in a small network of caves in the
+mountains to the southeast. The gnomes
+of Gnomengarde are knownfor their
+magical inventions. They might have
+something with which to defeat the dragon. 
 
 Get whatever you can from them.
 
-If you bring back something useful and don't want to keep it for
-yourselves, Townmaster Harbin Wester will pay you 50gp for it.
+If you bring back something useful and
+don't want to keep it for yourselves,
+Townmaster Harbin Wester will pay you
+50gp for it.
 ```
 
 Next, the party visits the Miner's Exchange, a place where adventurers can buy and seel prospected ores and gems. This is a single floored, wooden building just to the south of the main town square. Inside they meet the owner Halia Thornton, who tells them `I DIDNT WRITE THIS DOWN WHOOPS`.
