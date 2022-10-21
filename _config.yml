@@ -2,3 +2,6 @@ name: Alex Stiff
 markdown: kramdown
 theme: jekyll-theme-tactile
 title: dnd.alexstiff.com
+collections:
+  party:
+    output: true

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Session Zero - captured!"
-date: 2022-08-20
+date: 2022-08-19
 ---
 
 ## The adventure begins

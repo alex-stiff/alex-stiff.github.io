@@ -6,9 +6,8 @@ title: The dragon of Icespire Peak
 <h1>Meet the party</h1>
 <ul class="posts">
   {% for member in site.party %}
-  hi
   <li>
-    <a href="{{ member.url }}" title="{{ member.title }}">x {{ member.name }}</a>
+    <a href="{{ member.url }}">{{ member.title  }}</a>
   </li>
   {% endfor %}
 </ul>
