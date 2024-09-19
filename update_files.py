@@ -5,6 +5,31 @@ import glob
 from pydantic import BaseModel
 from enum import Enum
 
+class Player(BaseModel):
+    name: str
+    games: int
+    average: float
+
+    def __str__(self):
+        return f"{self.name},{self.games},{self.average:.2f}"
+
+players: dict[str, Player] = {}
+
+for player in [
+    'Adam',
+    'Alex',
+    'Carl',
+    'Dave',
+    'Debbie',
+    'Iain',
+    'Karen',
+    'Lee',
+    'Linda',
+    'Ray',
+    'Steve'
+]:
+    players[player] = Player(name=player, games=0, average=0)
+
 def get_avg_from_score(score: list[str]) -> int:
     darts: int = 0
 
@@ -186,13 +211,21 @@ def get_match_from_file(filename: str) -> Match:
 
     return match
 
+# Todo make this work for more than 1 week
 for week in glob.glob('_source/*'):
     date = week.split('/')[-1]
 
     # Start writing to csv file in _data
     with open(f'_data/{date}.csv', 'w') as f:
-        f.write("Name,Games,Average\n")
+        f.write("name,games,average\n")
 
         for filename in glob.glob(f'{week}/*.csv'):
             match = get_match_from_file(filename)
-            f.write(f"{match.home},{match.home_score + match.away_score},{match.home_avg:.2f}\n")
+            players[match.home].games += (match.home_score + match.away_score)
+            players[match.home].average = match.home_avg
+            f.write(str(players[match.home]) + '\n')
+
+with open(f'_data/season.csv', 'w') as f:
+    f.write("name,games,average\n")
+    for name, player in players.items():
+        f.write(str(player) + '\n')
