@@ -5,16 +5,27 @@ date: 2024-09-12
 categories: matchnight
 ---
 
+## Result
+
+| **Q-Army** | 5 - 4 | Jolly Bulls |
+
 ## Doubles
 
 {% assign date_key = page.date | date: "%Y-%m-%d" %}
 
 | Home | Score | Away |
-| - | - | - |{% for game in site.data[date_key] %}{% if game['Home'] contains '&' %}
-| {{ game['Home'] }} | {{ game['Score'] }} | {{ game['Away'] }} |{% endif %}{% endfor %}
+| - | - | - |
+| **Iain & Adam** | 2 - 1 | Mark & Josh |
+| **Ray & Carl** | 2 - 0 | Jordan & Paul |
+| **Alex & Lee** | 2 - 1 | Martin & Mark W |
 
 ## Singles
 
-| Home | Score | Away | Avg | 100s |
-| - | - | - | - | - |{% for game in site.data[date_key] %}{% unless game['Home'] contains '&' %}
-| {{ game['Home'] }} | {{ game['Score'] }} | {{ game['Away'] }} | {{ game['Avg'] }} | {{ game['100s'] }} |{% endunless %}{% endfor %}
+| Home | Score | Away |
+| - | - | - |
+| Alex | 1 - 2 | **Paul** |
+| Iain | 1 - 2 | **Mark W** |
+| Carl | 1 - 2 | **Martin** |
+| **Ray**  | 2 - 0 | Josh |
+| Adam | 1 - 2 | Mark N |
+| **Dave** | 2 - 0 | Jordan |
