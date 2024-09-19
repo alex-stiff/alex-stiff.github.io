@@ -36,7 +36,7 @@ permalink: /team/
     {% for player_data in site.data.players %}
         {% if player == player_data.forename %}
 <div style="display: flex; align-items: center; margin-bottom: 20px;">
-    <img src="/assets/images/{{ player }}.png" alt="{{ player.Name }}" style="width: 200px; height: auto; margin-right: 15px;" />
+    <img src="/assets/images/{{ player | downcase }}.png" alt="{{ player.Name }}" style="width: 200px; height: auto; margin-right: 15px;" />
     <div>
     <h3>{{ player_data.forename }}</h3>
     <p>Season average: {{ season_avg }}</p>
