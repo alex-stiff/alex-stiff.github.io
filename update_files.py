@@ -26,25 +26,45 @@ class CheckoutDartsEnum(str, Enum):
     x2 = 'x2'
     x3 = 'x3'
 
+    def __str__(self):
+        return str(self.value)
+
 
 class Game(BaseModel):
     home_score: list[int | CheckoutDartsEnum] = []
     away_score: list[int | CheckoutDartsEnum] = []
+    home_total_score: int = 0
+    away_total_score: int = 0
     home_avg: int = 0
     away_avg: int = 0
+    home_darts: int = 0
+    away_darts: int = 0
     winner: PlayersEnum = None
+    home_player: str = ""
+    away_player: str = ""
 
-    def set_winner(self):
-        for score in self.home_score:
-            if 'x' in score:
+    def set_darts_and_avg(self):
+        for s in self.home_score:
+            if type(s) == int:
+                self.home_darts += 3
+                self.home_total_score += s
+            else:
+                self.home_darts += int(s.replace('x', ''))
                 self.winner = PlayersEnum.home
+                self.home_total_score = 501
         
-        if not self.winner:
-            self.winner = PlayersEnum.away
+        for s in self.away_score:
+            if type(s) == int:
+                self.away_darts += 3
+                self.away_total_score += s
+            else:
+                self.away_darts += int(s.replace('x', ''))
+                self.winner = PlayersEnum.away
+                self.away_total_score = 501
         
-        self.home_avg = get_avg_from_score(self.home_score)
-        self.away_avg = get_avg_from_score(self.away_score)
-    
+        self.home_avg = self.home_total_score / self.home_darts * 3
+        self.away_avg = self.away_total_score / self.away_darts * 3
+
     def print_game(self):
         home_score = 501
         away_score = 501
@@ -53,24 +73,24 @@ class Game(BaseModel):
         away_remaining = [501]
 
         for score in self.home_score:
-            if 'x' in score:
+            try:
+                home_score -= score
+            except TypeError:
                 home_score -= home_score
-            else:
-                home_score -= int(score)
 
             home_remaining.append(home_score)
 
         for score in self.away_score:
-            if 'x' in score:
+            try:
+                away_score -= score
+            except TypeError:
                 away_score -= away_score
-            else:
-                away_score -= int(score)
 
             away_remaining.append(away_score)
 
-        print(f"| Home  |     | - | Away |     |")
-        print(f"| ----- | --- | - | ---- | --- |")
-        print(f"|       | 501 | - |      | 501 |")
+        print(f"| {self.home_player: <7} |     | - | {self.away_player: <7} |     |")
+        print(f"| ------- | --- | - | ------- | --- |")
+        print(f"|         | 501 | - |         | 501 |")
 
         game_over = False
 
@@ -95,37 +115,25 @@ class Game(BaseModel):
             except IndexError:
                 game_over = True
 
+
+            print(f"| {home: <7} | {home_left: <3} | - | {away: <7} | {away_left: <3} |")
+
             if game_over:
                 print()
                 break
-
-            print(f"| {home: <5} | {home_left: <3} | - | {away: <5} | {away_left: <3} |")
-
-
-
-        # print(f"| Home |     | - | Away |     |")
-        # print(f"|      | 501 | - |      | 501 |")
-        # for i in range(max(len(self.home_score), len(self.away_score))):
-        #     home_throw = self.home_score[i] if i < len(self.home_score) else ''
-        #     away_throw = self.away_score[i] if i < len(self.away_score) else ''
-
-        #     home_score -= self.home_score[i] if i < len(self.home_score) else ''
-        #     away_score -= self.away_score[i] if i < len(self.away_score) else ''
-        #     print(f"|  {self.home_score[i]}    | {home_score} | - |  {self.away_score[i]}    | {away_score} |")
-            
-        #     print(f"| {home_score} | {501 - sum(self.home_score[:i])} | - | {away_score} | {501 - sum(self.away_score[:i])} |")
-        # | 100  | 401 | - | 90   | 411 |
-
 
 class Match(BaseModel):
     home: str
     away: str
     home_score: int = 0
     away_score: int = 0
+    home_avg: int = 0
+    away_avg: int = 0
     games: list[Game] = []
     winner: PlayersEnum = None
 
-    def add_game(self, game: Game):
+    def add_game(self, home_score: list[str], away_score: list[str]):
+        game = Game(home_score=home_score, away_score=away_score, home_player=self.home, away_player=self.away)
         self.games.append(game)
 
         if game.winner == PlayersEnum.home:
@@ -137,68 +145,54 @@ class Match(BaseModel):
             self.winner = PlayersEnum.home
         elif self.away_score == 2:
             self.winner = PlayersEnum.away
+    
+    # def print_stats():
+
+def get_match_from_file(filename: str) -> Match:
+    _, home, away = filename.split('/')[-1].replace('.csv', '').split('-')
+    match = Match(home=home.capitalize(), away=away.capitalize())
+
+    with open(filename, 'r') as f:
+        reader = csv.reader(f)
+        
+        for row in reader:
+            player, scores = row
+
+            if player == PlayersEnum.home:
+                home_score = scores.split(' ')
+                continue
+            else:
+                away_score = scores.split(' ')
+            
+            game = Game(
+                home_score=home_score,
+                away_score=away_score,
+                home_player=home.capitalize(),
+                away_player=away.capitalize()
+            )
+
+            game.set_darts_and_avg()
+
+            match.games.append(game)
+    
+    # Set match stats
+    match.home_score = len([game for game in match.games if game.winner == PlayersEnum.home])
+    match.away_score = len([game for game in match.games if game.winner == PlayersEnum.away])
+
+    # Calculate the average weighted by num darts per game
+    total_home_score = sum([game.home_darts * game.home_avg for game in match.games])
+    match.home_avg = total_home_score / sum([game.home_darts for game in match.games])
 
 
-# Home,Scores
-# Alex,100 121 95 85 60 x1
-# John, 90 100 26 55 30
-
-# Want to generate markdown like this:
-# | Alex |     | - | John |     |
-# |      | 501 | - |      | 501 |
-# | 100  | 401 | - | 90   | 411 |
+    return match
 
 for week in glob.glob('_source/*'):
     date = week.split('/')[-1]
-    for filename in glob.glob(f'{week}/*.csv'):
-        match_number, home, away = filename.split('/')[-1].replace('.csv', '').split('-')
-        print(date, match_number, home, away)
 
-        match = Match(home=home.capitalize(), away=away.capitalize())
-        with open(filename, 'r') as f:
-            reader = csv.reader(f)
-            
-            game = Game()
+    # Start writing to csv file in _data
+    with open(f'_data/{date}.csv', 'w') as f:
+        f.write("Name,Games,Average\n")
 
-            for row in reader:
-                player, scores = row
-
-                if player == PlayersEnum.home:
-                    game.home_score = scores.split(' ')
-                else:
-                    game.away_score = scores.split(' ')
-                
-                if game.home_score and game.away_score:
-                    game.set_winner()
-                    match.add_game(game)
-                    game = Game()
-
-        for game in match.games:
-            game.print_game()
-            print(f"Home avg: {game.home_avg}")
-
-if False:
-    for filename in glob.glob('_source/*.csv'):
-        home, away = filename.split('/')[-1].replace('.csv', '').split('-')
-
-        match = Match(home=home.capitalize(), away=away.capitalize())
-        with open(filename, 'r') as f:
-            reader = csv.reader(f)
-            
-            game = Game()
-
-            for row in reader:
-                player, scores = row
-
-                if player == PlayersEnum.home:
-                    game.home_score = scores.split(' ')
-                else:
-                    game.away_score = scores.split(' ')
-                
-                if game.home_score and game.away_score:
-                    game.set_winner()
-                    match.add_game(game)
-                    game = Game()
-        
-        for game in match.games:
-            game.print_game()
+        for filename in glob.glob(f'{week}/*.csv'):
+            match = get_match_from_file(filename)
+            f.write(f"{match.home},{match.home_score + match.away_score},{match.home_avg:.2f}\n")
