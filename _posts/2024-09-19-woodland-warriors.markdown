@@ -15,9 +15,9 @@ categories: matchnight
 
 | Home | Score | Away |
 | - | - | - |
-| Steve & Debbie | 0 - 2 | ??? & ??? |
-| **Dave & Alex** | 2 - 1 | ??? & ??? |
-| ??? & Linda | 2 - 1 | ??? & ??? |
+| Steve & Debbie | 0 - 2 | **Peter & Joe** |
+| **Dave & Alex** | 2 - 1 | Alex & Glenn |
+| Ray & Carl | 1 - 2 | **Danny & Cos** |
 
 ## Singles
 
