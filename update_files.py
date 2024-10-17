@@ -210,7 +210,7 @@ players: dict[str, Player] = {
 }
 
 # Todo make this work for more than 1 week
-for week in glob.glob('_source/*'):
+for week in glob.glob('_python_source/*'):
     date = week.split('/')[-1]
 
     # Start writing to csv file in _data
