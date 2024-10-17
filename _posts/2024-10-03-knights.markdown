@@ -1,0 +1,31 @@
+---
+layout: post
+title:  "Q-Army vs Knights"
+date: 2024-10-03
+categories: matchnight
+---
+
+## Result
+
+| Q-Army | 4-5 | Knights |
+
+## Doubles
+
+{% assign date_key = page.date | date: "%Y-%m-%d" %}
+
+| Home | Score | Away |
+| - | - | - |
+| Iain & Alex | 2 - 0 | Stuart & Paul |
+| Lee & Carl | 1 - 2 | **John & David** |
+| Adam & Ray | 1 - 2 | **Marc & Jack** |
+
+## Singles
+
+| Home | Score | Away |
+| - | - | - |
+| Lee | 1 - 2 | **John** |
+| **Dave** | 1 - 2 | Jack |
+| Adam | 2 - 1 | **Stuart** |
+| **Iain**  | 2 - 1 | Marc |
+| **Carl** | 2 - 0 | Paul |
+| Alex | 2 - 0 | **David** |
