@@ -1,0 +1,29 @@
+---
+layout: post
+title:  "Q-Army vs Last Legs"
+date: 2024-10-17
+categories: matchnight
+---
+
+## Result
+
+| Q-Army | 6 - 3 | Last Legs |
+
+## Doubles
+
+| Home | Score | Away |
+| - | - | - |
+| **Iain & Alex** | 2 - 1 | Peter & Scott |
+| Ray & Adam | 1 - 2 | Brian & Mark W |
+| **Carl & Lee** | 2 - 1 | Roger & Tom |
+
+## Singles
+
+| Home | Score | Away |
+| - | - | - |
+| **Alex** | 2 - 0 | John |
+| **Iain** | 2 - 0 | Mark L |
+| **Carl** | 2 - 0 | Mark W |
+| Adam | 1 - 2 | **Brian** |
+| **Lee** | 2 - 1 | Roger |
+| Dave | 0 - 2 | **Tom** |
