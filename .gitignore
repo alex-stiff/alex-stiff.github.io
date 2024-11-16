@@ -3,5 +3,6 @@ _site
 .jekyll-metadata
 _source
 .venv
+venv
 .DS_Store
 test.py
