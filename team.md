@@ -1,7 +1,6 @@
 ---
 layout: page
 title: Team
-permalink: /team/
 ---
 
 {% for player in site.data.season %}
