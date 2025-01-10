@@ -1,9 +1,13 @@
 #!/usr/env python3
 
-import csv
+import pandas
+import datetime
 import glob
 from pydantic import BaseModel
 from enum import Enum
+import matplotlib.pyplot as plt
+import matplotlib.dates as mdates
+
 
 def get_avg_from_score(score: list[str]) -> int:
     darts: int = 0
@@ -71,6 +75,7 @@ class Match(BaseModel):
     legs_against: int = 0
     games: list[Game] = []
     avg: float = 0
+    date: datetime.date
 
     def add_game(self, score: list[int]):
         game = Game(score=score)
@@ -86,8 +91,12 @@ class Match(BaseModel):
     # def print_stats():
 
 def get_match_from_file(filename: str) -> Match:
+    date = filename.split('/')[-2]
     _, player, _ = filename.split('/')[-1].replace('.csv', '').split('-')
-    match = Match(player=player.capitalize())
+    match = Match(
+        player=player.capitalize(),
+        date=datetime.datetime.strptime(date,'%Y-%m-%d')
+    )
 
     with open(filename) as f:      
         for game in f.readlines():
@@ -129,6 +138,7 @@ class Player(BaseModel):
     name: str
     num_games: int = 0
     games: list[Game] = []
+    matches: list[Match] = []
 
 
 players: dict[str, Player] = {
@@ -161,12 +171,46 @@ for week in glob.glob('_python_source/*'):
             f.write(f"{match.player},{weekly_avg:.2f}\n")
 
             players[match.player].games += match.games
+            players[match.player].matches.append(match)
 
-# for name, player in players.items():
-#     print(name)
-#     for game in player.games:
-#         print(game.avg, game.darts, game.score)
-#     print()
+for name, player in players.items():
+    if not player.matches:
+        continue
+    
+    if player.name != 'Ray':
+        continue
+
+    df = pandas.DataFrame()
+    df['dates'] = [m.date for m in player.matches]
+    plt.xlim(
+    pandas.Timestamp(df['dates'].min()).replace(day=1),  # Start at the beginning of the first month
+    pandas.Timestamp(df['dates'].max()) + pandas.offsets.MonthEnd(0)  # End at the last day of the last month
+)
+    print(name)
+    darts = 0
+    score = 0
+    moving_avg = []
+    for match in player.matches:
+        darts += sum([g.darts for g in match.games])
+        score += sum([sum(g.score) for g in match.games])
+        print(darts, score, f"{match.avg:.2f}", f"{3 * score/darts:.2f}")
+        moving_avg.append(3 * score/darts)
+        # print(game.avg, game.darts, game.score)
+    df['avgs'] = moving_avg
+    df = df.sort_values('dates')
+    plt.title("Season averages", fontsize=16)
+    plt.xlabel("Date", fontsize=12)
+    plt.ylabel("Average", fontsize=12)
+    plt.xticks(rotation=45, fontsize=10)
+    plt.grid(axis='y', linestyle='--', alpha=0.7)
+    plt.legend()
+
+    plt.plot(df['dates'], df['avgs'], marker='o', color='skyblue', label='Averages')
+    plt.gca().xaxis.set_major_locator(plt.matplotlib.dates.MonthLocator())
+    plt.gca().xaxis.set_major_formatter(plt.matplotlib.dates.DateFormatter('%b %Y'))
+    plt.tight_layout()
+    plt.show()
+    print()
 
 with open('_data/season.csv', 'w') as f:
     f.write("name,games,average\n")

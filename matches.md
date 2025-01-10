@@ -4,4 +4,5 @@
 
 layout: home
 permalink: /matches/
+title: Matches
 ---

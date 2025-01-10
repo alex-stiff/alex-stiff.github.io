@@ -5,7 +5,7 @@ title: Team
 
 {% for player in site.data.season %}
 <div style="display: flex; align-items: center; margin-bottom: 20px;">
-    <img src="/assets/images/{{ player.name | downcase }}.png" alt="{{ player.Name }}" style="width: 200px; height: auto; margin-right: 15px;" />
+    <img src="/assets/images/{{ player.name | downcase }}.png" alt="{{ player.Name }}" style="width: 160px; height: auto; margin-right: 15px;" />
     <div>
         <h3>{{ player.name }}</h3>
         <p>Games: {{ player.games }}</p>
