@@ -177,7 +177,7 @@ for name, player in players.items():
     if not player.matches:
         continue
     
-    if player.name != 'Ray':
+    if player.name != 'Rxay':
         continue
 
     df = pandas.DataFrame()
